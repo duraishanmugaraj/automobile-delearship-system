@@ -30,7 +30,8 @@ app.use(session({
 
   const userSchema = new mongoose.Schema({
     username:String,
-    password:String
+    password:String,
+    isAdmin:Boolean
   })
   
   userSchema.plugin(passportLocalMongoose); //passport plugin
@@ -42,7 +43,7 @@ app.use(session({
   passport.serializeUser(User.serializeUser());
   passport.deserializeUser(User.deserializeUser());
 
-
+// login route
   app.get("/",function(req,res){
     if(req.isAuthenticated()){
       res.redirect("/home")
@@ -51,6 +52,7 @@ app.use(session({
     }
   })
 
+  // register route
   app.get("/register",function(req,res){
     if(req.isAuthenticated()){
       res.redirect("/home")
@@ -98,14 +100,82 @@ app.post("/login",function(req,res){
 // Home Route
 app.get("/home",function(req,res){
 if(req.isAuthenticated()){
-  console.log(req.user)
     Model.find(function(err,found){
-      res.render("home",{cars:found})
+      res.render("home",{cars:found,isAdmin:req.user.isAdmin})
         })
   } else {
     res.redirect("/")
   }    
 })
+
+// admin route
+app.get("/admin",function(req,res){
+  if(req.isAuthenticated()){
+    if(req.user.isAdmin){
+      res.render("admin",{isAdmin:req.user.isAdmin})
+      }else{
+        res.redirect("/home")
+      }
+  } else{
+    res.redirect("/")
+  }
+
+})
+
+app.get("/booknow/:carid",function(req,res){
+if(req.isAuthenticated()){
+  const id = req.params.carid
+  Model.findOne({_id:id},function(err,carFound){
+    res.render("booknow",{car:carFound,isAdmin:req.user.isAdmin})
+  })
+}
+})
+
+// service
+app.get("/service",function(req,res){
+  if(req.isAuthenticated()){
+    if(req.user.isAdmin){
+      Servicing.find(function(err,foundService){
+        if(err){
+          console.log(err)
+        } else{
+           res.render("adminService",{isAdmin:req.user.isAdmin,service:foundService})
+        }
+      })
+     
+    } else{
+      res.render("service",{isAdmin:req.user.isAdmin})
+    }
+  } else{
+    res.redirect("/")
+  }
+})
+
+// admin service delete
+app.post("/service/delete",function(req,res){
+Servicing.deleteOne({_id:req.body.id},function(err){
+  if (err){
+    console.log(err)
+  } else{
+    res.redirect("/service")
+  }
+})
+})
+
+
+// const newService = new Servicing({
+// 	"customerImage": "/images/6.jpg",
+// 	"customerName": "Bruce Wayne",
+// 	"customerEmail": "wayne.bruce@gmail.com",
+// 	"customerPhone": "8444153287",
+// 	"customerModel": "2019 Tesla Model X Standard Plus",
+// 	"customerType": "Air Condition Service",
+// 	"customerDone": "Yes",
+// 	"customerBill": "$300",
+// 	"Date": "03/02/2020"
+// })
+
+// newService.save().then(() => console.log('new service'));
 
 
 // const newCar = new Model({ 
@@ -126,7 +196,9 @@ if(req.isAuthenticated()){
 //  });
 // newCar.save().then(() => console.log('meow'));
 
-  // node server initialization
+  
+
+// node server initialization
   app.listen(3000, function(){
     console.log("Server started on port 3000.");
   });
