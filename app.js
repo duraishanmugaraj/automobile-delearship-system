@@ -51,11 +51,62 @@ app.use(session({
     res.render("register")
 })
 
+app.post("/login",function(req,res){
+  const user = new User({
+    username:req.body.username,
+    password:req.body.password
+  })
+  req.logIn(user,function(err){
+    if(err){
+      console.log(err)
+      res.redirect("/login")
+    } else {
+      passport.authenticate("local")(req,res,function(){
+        res.redirect("/home")
+      })
+    }
+  })
+  })
+  
+  app.post("/register",function(req,res){
+  
+    User.register({username:req.body.username},req.body.password,function(err,user){
+    if(err){
+      console.log(err)
+      res.redirect("/register")
+    } else {
+      passport.authenticate("local")(req,res,function(){
+        res.redirect("/home")
+      })
+    }
+  })
+  })
+
 app.get("/home",function(req,res){
-    res.render("home")
+  Model.find(function(err,found){
+res.render("home",{cars:found})
+  })
+    
 })
 
 
+// const newCar = new Model({ 
+//   "imagePath": "images/8.jpg",
+// 	"title": "Tesla Model Y Long Range AWD",
+// 	"t1": "2020 Tesla Model Y",
+// 	"t2": "Long Range AWD Edition",
+// 	"price": "52,000",
+// 	"topspeed": "135",
+// 	"time60": "4.8",
+// 	"range": "346",
+// 	"colour": "Red Metallic Paint",
+// 	"interior": "Cream Oakwood Interior",
+// 	"wheel": "19'' Induction Wheels",
+// 	"description": "Model Y provides maximum versatility creating flexible storage for skis, furniture, luggage and a low trunk floor that makes loading and unloading easy and quick with all-Wheel Drive has two ultra-responsive, independent electric motors that digitally control torque.",
+// 	"safety": "Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof",
+// 	"rangedesc": "Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network."
+//  });
+// newCar.save().then(() => console.log('meow'));
 
   // node server initialization
   app.listen(3000, function(){
