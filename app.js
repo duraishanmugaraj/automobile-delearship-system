@@ -44,11 +44,25 @@ app.use(session({
 
 
   app.get("/",function(req,res){
+    if(req.isAuthenticated()){
+      res.redirect("/home")
+    }else{
       res.render("login")
+    }
   })
 
   app.get("/register",function(req,res){
-    res.render("register")
+    if(req.isAuthenticated()){
+      res.redirect("/home")
+    }else{
+      res.render("register")
+    }
+})
+
+// logout
+app.get("/logout",function(req,res){
+  req.logout()
+  res.redirect("/")
 })
 
 app.post("/login",function(req,res){
@@ -59,7 +73,7 @@ app.post("/login",function(req,res){
   req.logIn(user,function(err){
     if(err){
       console.log(err)
-      res.redirect("/login")
+      res.redirect("/")
     } else {
       passport.authenticate("local")(req,res,function(){
         res.redirect("/home")
@@ -69,7 +83,6 @@ app.post("/login",function(req,res){
   })
   
   app.post("/register",function(req,res){
-  
     User.register({username:req.body.username},req.body.password,function(err,user){
     if(err){
       console.log(err)
@@ -82,11 +95,16 @@ app.post("/login",function(req,res){
   })
   })
 
+// Home Route
 app.get("/home",function(req,res){
-  Model.find(function(err,found){
-res.render("home",{cars:found})
-  })
-    
+if(req.isAuthenticated()){
+  console.log(req.user)
+    Model.find(function(err,found){
+      res.render("home",{cars:found})
+        })
+  } else {
+    res.redirect("/")
+  }    
 })
 
 
