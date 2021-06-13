@@ -162,6 +162,10 @@ Servicing.deleteOne({_id:req.body.id},function(err){
 })
 })
 
+app.post("/service",function(req,res){
+  console.log(req.body)
+})
+
 
 // const newService = new Servicing({
 // 	"customerImage": "/images/6.jpg",

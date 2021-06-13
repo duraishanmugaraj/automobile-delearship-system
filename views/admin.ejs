@@ -2,7 +2,82 @@
 
     <body>
         <%- include('partials/nav'); -%>
-            <div class="container">
+            <div class="container"
+                style="background-color: white; border-radius: 10px; margin-top: 50px; margin-bottom: 50px;">
+
+                <form action="/" method="post">
+                    <div class="form-row" style="padding-top: 25px;">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Title</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="title">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Price</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Title 2</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="title2">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Title 3</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="title3">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Top Speed</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="speed">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Time 60 </label>
+                            <input type="text" class="form-control" id="inputPassword4" name="time60">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Range</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="range">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Color</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="colour">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Interior</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="interior">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Wheel</label>
+                            <input type="text" class="form-control" id="inputPassword4" name="wheel">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Description</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="speed">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Safty </label>
+                            <input type="text" class="form-control" id="inputPassword4" name="safty">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword4">Range Description</label>
+                        <input type="text" class="form-control" id="inputPassword4" name="range">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Image</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="img"
+                        style="margin-bottom: 25px;">Submit</button>
+                </form>
                 <!-- Content here -->
             </div>
             <%- include('partials/footer'); -%>
