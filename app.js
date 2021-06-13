@@ -51,6 +51,10 @@ app.use(session({
     res.render("register")
 })
 
+app.get("/home",function(req,res){
+    res.render("home")
+})
+
 
 
   // node server initialization

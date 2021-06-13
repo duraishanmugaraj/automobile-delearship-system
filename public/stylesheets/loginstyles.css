@@ -1,8 +1,13 @@
 body{
-    background-image: url('/images/login2.jpg');
+    background-image: url('https://images.unsplash.com/photo-1612450915514-10c3a7945625?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=809&q=80');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+h1{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 50px;
 }
 
 .title{
@@ -20,11 +25,17 @@ body{
     margin-top: 30px;
 }
 
+#reg {
+    position: absolute;
+    top: 68%;
+    right: 47%;
+
+}
 
 .loginForm{
-    background: rgb(238, 238, 238,0.9);
+    background: rgb(238, 238, 238,0.8);
     border-style: solid;
-    border-color: rgb(238, 238, 238,0.9);
+    border-color: rgb(238, 238, 238,1);
     border-width: 2.5px;
     border-radius: 18px;
     width: 400px;
@@ -69,8 +80,7 @@ body{
 
 
 .erroralert{
-    
-    padding-top:5px ;
+     padding-top:5px ;
     padding-bottom: 5px;
 }
 
