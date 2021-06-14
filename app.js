@@ -48,7 +48,7 @@ app.use(session({
     if(req.isAuthenticated()){
       res.redirect("/home")
     }else{
-      res.render("login")
+      res.render("login",{isInvalid:false})
     }
   })
 
@@ -67,22 +67,31 @@ app.get("/logout",function(req,res){
   res.redirect("/")
 })
 
-app.post("/login",function(req,res){
-  const user = new User({
-    username:req.body.username,
-    password:req.body.password
-  })
-  req.logIn(user,function(err){
-    if(err){
-      console.log(err)
-      res.redirect("/")
-    } else {
-      passport.authenticate("local")(req,res,function(){
-        res.redirect("/home")
-      })
-    }
-  })
-  })
+app.post('/login', passport.authenticate('local', { successRedirect:'/home', failureRedirect: '/invalid' }));
+
+app.get("/invalid",function(req,res){
+  if(req.isAuthenticated()){
+    res.redirect("/home")
+  }else{
+    res.render("login",{isInvalid:true})
+  }
+})
+// app.post("/login",function(req,res){
+//   const user = new User({
+//     username:req.body.username,
+//     password:req.body.password
+//   })
+//   req.logIn(user,function(err){
+//     if(err){
+//       console.log(err)
+//       res.redirect("/")
+//     } else {
+//       passport.authenticate("local")(req,res,function(){
+//         res.redirect("/home")
+//       })
+//     }
+//   })
+//   })
   
   app.post("/register",function(req,res){
     User.register({username:req.body.username},req.body.password,function(err,user){
@@ -144,7 +153,7 @@ app.get("/service",function(req,res){
       })
      
     } else{
-      res.render("service",{isAdmin:req.user.isAdmin,isService:true})
+      res.render("service",{isAdmin:req.user.isAdmin,isService:false})
     }
   } else{
     res.redirect("/")
@@ -172,7 +181,7 @@ app.post("/service",function(req,res){
     "customerType": req.body.service,
     "customerBill": req.body.bill,
   })
-    newService.save().then(() => res.render("service",{isAdmin:req.user.isAdmin,isService:false}));
+    newService.save().then(() => res.render("service",{isAdmin:req.user.isAdmin,isService:true}));
   })
 
   app.post("/admin",function(req,res){

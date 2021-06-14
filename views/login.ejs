@@ -46,6 +46,14 @@
                 </div>
 
                 <a id="reg" href="/register">Register here</a>
+
+                <% if(isInvalid){ %>
+                    <div class="container" style="width: 325px; margin-top: 50px;">
+                        <div class="alert alert-danger" role="alert">
+                            Invalid Email id or password
+                        </div>
+                    </div>
+                    <% } %>
             </div>
         </form>
     </center>
