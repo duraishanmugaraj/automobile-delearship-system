@@ -163,42 +163,43 @@ Servicing.deleteOne({_id:req.body.id},function(err){
 })
 
 app.post("/service",function(req,res){
-  console.log(req.body)
-})
+  const newService = new Servicing({
+    "customerImage": req.body.img,
+    "customerName": req.body.name,
+    "customerEmail": req.body.email,
+    "customerPhone": req.body.Phoneno,
+    "customerModel": req.body.model,
+    "customerType": req.body.service,
+    "customerBill": req.body.bill,
+  })
+    newService.save().then(() => res.send("submitted successfully"));
+  })
+
+  app.post("/admin",function(req,res){
+  
+    const newCar = new Model({ 
+      "imagePath": req.body.img,
+    	"title": req.body.title,
+    	"t1": req.body.title2,
+    	"t2": req.body.title3,
+    	"price": req.body.price,
+    	"topspeed": req.body.speed,
+    	"time60": req.body.time60,
+    	"range": req.body.range,
+    	"colour": req.body.colour,
+    	"interior": req.body.interior,
+    	"wheel": req.body.wheel,
+    	"description": req.body.desc,
+    	"safety":  req.body.safty,
+    	"rangedesc": req.body.rangedesc
+     });
+    newCar.save().then(() => res.redirect("/home"));
+  })
 
 
-// const newService = new Servicing({
-// 	"customerImage": "/images/6.jpg",
-// 	"customerName": "Bruce Wayne",
-// 	"customerEmail": "wayne.bruce@gmail.com",
-// 	"customerPhone": "8444153287",
-// 	"customerModel": "2019 Tesla Model X Standard Plus",
-// 	"customerType": "Air Condition Service",
-// 	"customerDone": "Yes",
-// 	"customerBill": "$300",
-// 	"Date": "03/02/2020"
-// })
-
-// newService.save().then(() => console.log('new service'));
 
 
-// const newCar = new Model({ 
-//   "imagePath": "images/8.jpg",
-// 	"title": "Tesla Model Y Long Range AWD",
-// 	"t1": "2020 Tesla Model Y",
-// 	"t2": "Long Range AWD Edition",
-// 	"price": "52,000",
-// 	"topspeed": "135",
-// 	"time60": "4.8",
-// 	"range": "346",
-// 	"colour": "Red Metallic Paint",
-// 	"interior": "Cream Oakwood Interior",
-// 	"wheel": "19'' Induction Wheels",
-// 	"description": "Model Y provides maximum versatility creating flexible storage for skis, furniture, luggage and a low trunk floor that makes loading and unloading easy and quick with all-Wheel Drive has two ultra-responsive, independent electric motors that digitally control torque.",
-// 	"safety": "Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof",
-// 	"rangedesc": "Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network."
-//  });
-// newCar.save().then(() => console.log('meow'));
+
 
   
 

@@ -5,7 +5,7 @@
             <div class="container"
                 style="background-color: white; border-radius: 10px; margin-top: 50px; margin-bottom: 50px;">
 
-                <form action="/" method="post">
+                <form action="/admin" method="post">
                     <div class="form-row" style="padding-top: 25px;">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Title</label>
@@ -13,7 +13,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Price</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="email">
+                            <input type="text" class="form-control" id="inputPassword4" name="price">
                         </div>
                     </div>
                     <div class="form-row">
@@ -60,23 +60,25 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Description</label>
-                            <input type="text" class="form-control" id="inputEmail4" name="speed">
+                            <input type="text" class="form-control" id="inputEmail4" name="desc">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Safty </label>
                             <input type="text" class="form-control" id="inputPassword4" name="safty">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="inputPassword4">Range Description</label>
-                        <input type="text" class="form-control" id="inputPassword4" name="range">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Image Link</label>
+                            <input type="text" class="form-control" id="inputEmail4" name="img">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Range Desc </label>
+                            <input type="text" class="form-control" id="inputPassword4" name="rangedesc">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1">Image</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="img"
-                        style="margin-bottom: 25px;">Submit</button>
+
+                    <button type="submit" class="btn btn-primary" style="margin-bottom: 25px;">Submit</button>
                 </form>
                 <!-- Content here -->
             </div>

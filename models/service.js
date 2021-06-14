@@ -8,9 +8,7 @@ var servicingSchema = new Schema({
     customerPhone: { type: String, required: true },
     customerModel: { type: String, required: true },
     customerType: { type: String, required: true },
-    customerDone: { type: String, required: true },
     customerBill: { type: String, required: true },
-    Date: { type: String, required: true }
 });
 
 module.exports = mongoose.model("servicing", servicingSchema, "servicing");
