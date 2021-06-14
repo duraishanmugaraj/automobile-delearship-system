@@ -2,44 +2,53 @@
 
     <body>
         <%- include('partials/nav'); -%>
-            <div class="container" style="margin-top :75px; background-color: white; border-radius: 10px;">
+
+            <div class="container" style="margin-top: 30px;">
+                <% if(isService){ %>
+                    <div class="alert alert-success" role="alert">
+                        Service initiated, our admins will contact you.
+                    </div>
+                    <% } %>
+            </div>
+            <div class="container" style="margin-top :40px; background-color: white; border-radius: 10px;">
 
                 <form action="/service" method="post">
                     <div class="form-row" style="padding-top: 20px;">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Name" name="name">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Name" name="name"
+                                required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Email</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="email"
-                                placeholder="Email">
+                            <input type="text" class="form-control" id="inputPassword4" name="email" placeholder="Email"
+                                required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Phone number</label>
-                            <input type="text" class="form-control" id="inputEmail4" name="Phoneno">
+                            <input type="text" class="form-control" id="inputEmail4" name="Phoneno" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Model</label>
-                            <input type="text" class="form-control" id="inputPassword4" name="model">
+                            <input type="text" class="form-control" id="inputPassword4" name="model" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Service Type</label>
-                            <input type="text" class="form-control" id="inputEmail4" name="service">
+                            <input type="text" class="form-control" id="inputEmail4" name="service" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Bill </label>
-                            <input type="text" class="form-control" id="inputPassword4" name="bill">
+                            <input type="text" class="form-control" id="inputPassword4" name="bill" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Image link</label>
-                            <input type="text" class="form-control" id="inputEmail4" name="img">
+                            <input type="text" class="form-control" id="inputEmail4" name="img" required>
                         </div>
                     </div>
 

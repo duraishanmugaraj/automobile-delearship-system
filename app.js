@@ -144,7 +144,7 @@ app.get("/service",function(req,res){
       })
      
     } else{
-      res.render("service",{isAdmin:req.user.isAdmin})
+      res.render("service",{isAdmin:req.user.isAdmin,isService:true})
     }
   } else{
     res.redirect("/")
@@ -172,7 +172,7 @@ app.post("/service",function(req,res){
     "customerType": req.body.service,
     "customerBill": req.body.bill,
   })
-    newService.save().then(() => res.send("submitted successfully"));
+    newService.save().then(() => res.render("service",{isAdmin:req.user.isAdmin,isService:false}));
   })
 
   app.post("/admin",function(req,res){
@@ -197,9 +197,15 @@ app.post("/service",function(req,res){
   })
 
 
-
-
-
+app.post("/deleteCar",function(req,res){
+  Model.deleteOne({_id:req.body.delete},function(err){
+    if(!err){
+      res.redirect("/home")
+    } else{
+      console.log(err)
+    }
+  })
+})
 
   
 

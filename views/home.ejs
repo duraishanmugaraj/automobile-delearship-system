@@ -11,7 +11,9 @@
                         <div class="col">
                             <div class="thumbnail">
                                 <div class="modeltitle">
-                                    <!-- <h4>{{this.title}}</h4> -->
+                                    <h4>
+                                        <%= element.title %>
+                                    </h4>
                                 </div>
 
 
@@ -106,17 +108,28 @@
 
 
 
+                                <form action="/deleteCar" method="post">
+                                    <div class="buy_button">
+                                        <a style="color: white;" href="/booknow/<%= element._id%>">
+                                            <h4><button id="b1" type="button" class="btn btn-outline-light"> Book
+                                                    Now </button>
+                                        </a>
+                                        <% if(isAdmin){ %>
+                                            <button id="delete" type="submit" name="delete" value="<%= element.id %>"
+                                                class="btn btn-outline-light">Delete
+                                            </button>
+                                            <% } else { %>
+                                                &emsp;
+                                                &emsp;
+                                                &emsp;
+                                                &emsp;
+                                                <% } %>
+                                                    &emsp;
+                                                    &emsp; ₹<%= element.price %>
+                                                        </h4>
+                                    </div>
 
-                                <div class="buy_button">
-                                    <a style="color: white;" href="/booknow/<%= element._id%>">
-                                        <h4><button id="b1" type="button" class="btn btn-outline-light"> Book
-                                                Now </button>
-                                    </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;₹<%= element.price
-                                        %>
-                                        </h4>
-                                </div>
-
-
+                                </form>
 
                             </div>
                         </div>

@@ -105,3 +105,22 @@ body {
   border-radius: 25px;
   border-width: 2px;
 }
+#delete {
+  height: 40px;
+  width: 130px;
+  border-color: #ff0000;
+  background-color: white;
+  color: #ff0000;
+  border-radius: 25px;
+  border-width: 2.5px;
+}
+
+#delete:hover {
+  height: 40px;
+  width: 130px;
+  border-color: #ff0000;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 25px;
+  border-width: 2.5px;
+}
