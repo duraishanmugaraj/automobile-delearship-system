@@ -28,24 +28,35 @@
                         <hr>
                     </center>
                 </h2>
-                <div class="input">
-                    <div class="form-group userid">
-                        <input type="string" name="username" class="form-control" id="userid"
-                            aria-describedby="emailHelp" style="border-radius: 25px;" placeholder="  Email"
-                            autocomplete="off">
-                    </div>
 
-                    <div class="form-group userid">
-                        <input type="password" name="password" class="form-control" id="password"
-                            style="border-radius: 25px;" placeholder="  Password" autocomplete="off">
+                <% if(isInvalid){ %>
+                    <div class="container" style="width: 325px; margin-top: 10px;">
+                        <div class="alert alert-danger" role="alert">
+                            User already exists
+                        </div>
                     </div>
+                    <% } %>
+                        <div class="input">
+                            <div class="form-group userid">
+                                <input type="string" name="username" class="form-control" id="userid"
+                                    aria-describedby="emailHelp" style="border-radius: 25px;" placeholder="  Email"
+                                    autocomplete="off">
+                            </div>
 
-                    <div class="loginButton">
-                        <button id="l" type="submit" class="btn btn-outline-dark"> REGISTER </button>
-                    </div>
-                </div>
+                            <div class="form-group userid">
+                                <input type="password" name="password" class="form-control" id="password"
+                                    style="border-radius: 25px;" placeholder="  Password" autocomplete="off">
+                            </div>
 
-                <a id="reg" href="/">Login here</a>
+                            <div class="loginButton">
+                                <button id="l" type="submit" class="btn btn-outline-dark"> REGISTER </button>
+                            </div>
+                        </div>
+
+                        <div class="loginButton">
+                            <a href="/" class="btn btn-outline-dark btn-block" style="border-radius: 30px;">LOGIN
+                                HERE</a></button>
+                        </div>
             </div>
         </form>
     </center>

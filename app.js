@@ -27,7 +27,7 @@ app.use(session({
   
   //db connection
   mongoose.connect(process.env.MONGO || "mongodb://localhost:27017/automobileDB", {useNewUrlParser: true, useUnifiedTopology: true});
-  // mongoose.connect('mongodb://localhost:27017/automobileDB', {useNewUrlParser: true, useUnifiedTopology: true});
+  
 
   const userSchema = new mongoose.Schema({
     username:String,
@@ -58,7 +58,7 @@ app.use(session({
     if(req.isAuthenticated()){
       res.redirect("/home")
     }else{
-      res.render("register")
+      res.render("register",{isInvalid : false})
     }
 })
 
@@ -77,28 +77,12 @@ app.get("/invalid",function(req,res){
     res.render("login",{isInvalid:true})
   }
 })
-// app.post("/login",function(req,res){
-//   const user = new User({
-//     username:req.body.username,
-//     password:req.body.password
-//   })
-//   req.logIn(user,function(err){
-//     if(err){
-//       console.log(err)
-//       res.redirect("/")
-//     } else {
-//       passport.authenticate("local")(req,res,function(){
-//         res.redirect("/home")
-//       })
-//     }
-//   })
-//   })
-  
+
   app.post("/register",function(req,res){
     User.register({username:req.body.username},req.body.password,function(err,user){
     if(err){
       console.log(err)
-      res.redirect("/register")
+      res.render("register",{isInvalid : true})
     } else {
       passport.authenticate("local")(req,res,function(){
         res.redirect("/home")
