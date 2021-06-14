@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // passport initialization
 app.use(session({
-    secret:process.env.SECRET, // env variable
+    secret:process.env.SECRET, // env variable 
     resave:false,
     saveUninitialized:false
   }))
@@ -26,7 +26,8 @@ app.use(session({
   app.use(passport.session())
   
   //db connection
-  mongoose.connect('mongodb://localhost:27017/automobileDB', {useNewUrlParser: true, useUnifiedTopology: true});
+  mongoose.connect(process.env.MONGO || "mongodb://localhost:27017/automobileDB", {useNewUrlParser: true, useUnifiedTopology: true});
+  // mongoose.connect('mongodb://localhost:27017/automobileDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
   const userSchema = new mongoose.Schema({
     username:String,
