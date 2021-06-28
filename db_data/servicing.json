@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "60c735bb59fda508f6be0ba8"
+  },
+  "customerImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+  "customerName": "Durai",
+  "customerEmail": "durai@gmail.com",
+  "customerPhone": "45641684561",
+  "customerModel": "Tesla Model S Black",
+  "customerType": "wash",
+  "customerBill": "100",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c735bb59fda508f6be0ba9"
+  },
+  "customerImage": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+  "customerName": "duraishanmugaraj",
+  "customerEmail": "durai@gmail.com",
+  "customerPhone": "8825845010",
+  "customerModel": "Tesla Model Z",
+  "customerType": "water wash",
+  "customerBill": "100",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c735bb59fda508f6be0ba0"
+  },
+  "customerImage": "https://images.unsplash.com/photo-1508974239320-0a029497e820?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+  "customerName": "Durai Shanmugaraj R",
+  "customerEmail": "qwerty@bcrypt.com",
+  "customerPhone": "8825845010",
+  "customerModel": "Tesla Model S",
+  "customerType": "washing",
+  "customerBill": "$100",
+  "__v": 0
+}]

@@ -6,6 +6,7 @@ const session = require('express-session')
 const passport = require('passport')
 const passportLocalMongoose = require('passport-local-mongoose')
 const ejs = require("ejs")
+// implement node mailer
 
 var Model = require(__dirname+"/models/model");
 var Servicing = require(__dirname+"/models/service");
@@ -26,7 +27,8 @@ app.use(session({
   app.use(passport.session())
   
   //db connection
-  mongoose.connect(process.env.MONGO || "mongodb://localhost:27017/automobileDB", {useNewUrlParser: true, useUnifiedTopology: true});
+  // mongoose.connect(process.env.MONGO || "mongodb://localhost:27017/automobileDB", {useNewUrlParser: true, useUnifiedTopology: true});
+  mongoose.connect("mongodb://localhost:27017/automobileDB", {useNewUrlParser: true, useUnifiedTopology: true});
   
 
   const userSchema = new mongoose.Schema({

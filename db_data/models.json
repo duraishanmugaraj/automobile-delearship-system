@@ -1,0 +1,172 @@
+[{
+  "_id": {
+    "$oid": "60c59d355eb3520670173063"
+  },
+  "imagePath": "https://raw.githubusercontent.com/duraishanmugaraj/automobile-delearship-system/main/public/images/1.JPG",
+  "title": "Tesla Model 3 Performance",
+  "t1": "2020 Tesla Model 3",
+  "t2": "Performance edition",
+  "price": "54,000",
+  "topspeed": "162",
+  "time60": "3.2",
+  "range": "300",
+  "colour": "Solid Black Paint",
+  "interior": "Black Premium Interior",
+  "wheel": "20'' Aero Wheels",
+  "description": "Model 3 comes with the option of dual motor all-wheel drive, Performance Wheels and Brakes for total control, in all weather conditions and a spoiler improves stability at high speeds allowing Model 3 to accelerate from 0-60 mph in as little as 3.2 seconds.",
+  "safety": "Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof",
+  "rangedesc": "Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c59e5e3fa3c023c4bad487"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/2.JPG?raw=true",
+  "title": "Tesla Model 3 Standard Plus",
+  "t1": "2020 Tesla Model 3",
+  "t2": "Standard Plus Edition",
+  "price": "41,000",
+  "topspeed": "140",
+  "time60": "5.3",
+  "range": "250",
+  "colour": "Pearl White Paint",
+  "interior": "Black Premium Interior",
+  "wheel": "18'' Aero Wheels",
+  "description": "Model 3 comes with the option of dual motor all-wheel drive, Performance Wheels and Brakes for total control, in all weather conditions and a spoiler improves stability at high speeds allowing Model 3 to accelerate from 0-60 mph in as little as 3.2 seconds.",
+  "safety": "Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof",
+  "rangedesc": "Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c5a185db7422285ce102c9"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/3.JPG?raw=true",
+  "title": "Tesla Model S Performance",
+  "t1": "2020 Tesla Model S",
+  "t2": "Performance Edition",
+  "price": "102,000",
+  "topspeed": "165",
+  "time60": "2.4",
+  "range": "348",
+  "colour": "Red Metalic Paint",
+  "interior": "Black Premium Interior",
+  "wheel": "20'' Silver Alloy Wheels",
+  "description": "Model S sets an industry standard for performance and safety. Tesla’s all-electric powertrain delivers unparalleled performance in all weather conditions – with Dual Motor All-Wheel Drive, adaptive air suspension and ludicrous acceleration.",
+  "safety": "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
+  "rangedesc": "Model S can get you anywhere you want to go—with industry-leading range and convenient charging options, all over the world.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c5a19b532d5429c4b9e003"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/4.JPG?raw=true",
+  "title": "Tesla Model S Long Range",
+  "t1": "2020 Tesla Model S",
+  "t2": "Long Range Edition",
+  "price": "81,000",
+  "topspeed": "155",
+  "time60": "3.7",
+  "range": "391",
+  "colour": "Matte Grey Paint",
+  "interior": "Dark Ash Wood Interior",
+  "wheel": "19'' Tempest Wheels",
+  "description": "Model S sets an industry standard for performance and safety. Tesla’s all-electric powertrain delivers unparalleled performance in all weather conditions – with Dual Motor All-Wheel Drive, adaptive air suspension and ludicrous acceleration.",
+  "safety": "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
+  "rangedesc": "Model S can get you anywhere you want to go—with industry-leading range and convenient charging options, all over the world.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c5a1afb7b270132c2e2fe9"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/5.JPG?raw=true",
+  "title": "Tesla Model X Performance",
+  "t1": "2020 Tesla Model X",
+  "t2": "Performance Edition",
+  "price": "104,500",
+  "topspeed": "163",
+  "time60": "2.7",
+  "range": "305",
+  "colour": "Pearl White Paint",
+  "interior": "Black Premium Interior",
+  "wheel": "22'' Onyx Black Wheels",
+  "description": "Tesla’s all-electric powertrain delivers unparalleled performance in all weather conditions, with Dual Motor All-Wheel Drive, adaptive air suspension and the quickest acceleration of any SUV on the road—from zero to 60 mph in 2.7 seconds.",
+  "safety": "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
+  "rangedesc": "Model S can get you anywhere you want to go—with industry-leading range and convenient charging options, all over the world.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c5a1d2cb98a81ffc4be725"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/6.JPG?raw=true",
+  "title": "Tesla Model X Long Range",
+  "t1": "2020 Tesla Model X",
+  "t2": "Long Range Edition",
+  "price": "88,000",
+  "topspeed": "155",
+  "time60": "4.4",
+  "range": "328",
+  "colour": "Deep Blue Paint",
+  "interior": "Cream Oakwood Interior",
+  "wheel": "22'' Two-Tone Slip Stream Wheels",
+  "description": "Tesla’s all-electric powertrain delivers unparalleled performance in all weather conditions, with Dual Motor All-Wheel Drive, adaptive air suspension and the quickest acceleration of any SUV on the road—from zero to 60 mph in 2.7 seconds.",
+  "safety": "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
+  "rangedesc": "Model S can get you anywhere you want to go—with industry-leading range and convenient charging options, all over the world.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c5a1f41a0e031274e39d81"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/8.JPG?raw=true",
+  "title": "Tesla Model Y Performance",
+  "t1": "2020 Tesla Model Y",
+  "t2": "Performance Edition",
+  "price": "65,000",
+  "topspeed": "145",
+  "time60": "3.5",
+  "range": "315",
+  "colour": "Solid Black Paint",
+  "interior": "Cream Oakwood Interior",
+  "wheel": "19'' Gemini Wheels",
+  "description": "Model Y provides maximum versatility creating flexible storage for skis, furniture, luggage and a low trunk floor that makes loading and unloading easy and quick with all-Wheel Drive has two ultra-responsive, independent electric motors that digitally control torque.",
+  "safety": "Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof",
+  "rangedesc": "Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c5a2027f72d8006835a588"
+  },
+  "imagePath": "https://github.com/duraishanmugaraj/automobile-delearship-system/blob/main/public/images/7.JPG?raw=true",
+  "title": "Tesla Model Y Long Range AWD",
+  "t1": "2020 Tesla Model Y",
+  "t2": "Long Range AWD Edition",
+  "price": "52,000",
+  "topspeed": "135",
+  "time60": "4.8",
+  "range": "346",
+  "colour": "Red Metallic Paint",
+  "interior": "Cream Oakwood Interior",
+  "wheel": "19'' Induction Wheels",
+  "description": "Model Y provides maximum versatility creating flexible storage for skis, furniture, luggage and a low trunk floor that makes loading and unloading easy and quick with all-Wheel Drive has two ultra-responsive, independent electric motors that digitally control torque.",
+  "safety": "Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof",
+  "rangedesc": "Model 3 is fully electric, so you never need to visit a gas station again. If you charge overnight at home, you can wake up to a full battery every morning. And when you’re on the road, it’s easy to plug in along the way—at any public station or with the Tesla charging network.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9ac3b824ed500042a663b"
+  },
+  "imagePath": "https://images.unsplash.com/photo-1523676060187-f55189a71f5e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+  "title": "Tesla model S",
+  "t1": "Tesla model S",
+  "t2": "Tesla model S",
+  "price": "200000",
+  "topspeed": "100",
+  "time60": "5",
+  "range": "100",
+  "colour": "Blue",
+  "interior": "Tesla model S",
+  "wheel": "20\" Wheels",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "safety": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "rangedesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "__v": 0
+}]
