@@ -3,19 +3,19 @@ body {
 }
 
 .col0 {
-  background-color: white;
   margin: 20px;
 }
 
 .col0 {
   border-style: solid;
   border-width: 2.5px;
-  border-color: white;
   border-radius: 15px;
-}
-
-.col0:hover {
-  border-color: #b5b9bd;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .col0 img {
