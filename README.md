@@ -5,16 +5,20 @@ Automobile delearship System is a web application developed to provide digital r
 Checkout -> https://wizcarz.herokuapp.com/
 
 ## Features
+### User
+- Discover New Cars.
+- Purchase Cars.
+- Request for Services.
+### Admin
+- Add / Remove Cars
+- Manage Services.
 
-- Discover the currently popular movies.
-- Search movies using movie name in homepage.
-- View movie storyline, release date , watch time , information etc. from movie pages.
 
 ## Technologies Used
 
 - [ejs](https://ejs.co/) for templating
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/) for backend
+- [MongoDB](https://www.mongodb.com/) for database
 - [Passport.js](http://www.passportjs.org/) for authentication and session tracking
 - [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for Designing the webpage
 
