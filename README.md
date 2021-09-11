@@ -6,12 +6,12 @@ Checkout -> https://wizcarz.herokuapp.com/
 
 ## Features
 ### User
-- Discover New Cars.
-- Purchase Cars.
-- Request for Services.
+- Discover New Cars
+- Purchase Cars
+- Request for Services
 ### Admin
 - Add / Remove Cars
-- Manage Services.
+- Manage Services
 
 
 ## Technologies Used
